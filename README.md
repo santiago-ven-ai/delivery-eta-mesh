@@ -1,7 +1,7 @@
 # delivery-eta-mesh
 
-[![CI](https://github.com/Codemonster808/delivery-eta-mesh/actions/workflows/ci.yml/badge.svg)](https://github.com/Codemonster808/delivery-eta-mesh/actions/workflows/ci.yml)
-[![Coverage](https://img.shields.io/badge/coverage-9%25-yellow)](https://github.com/Codemonster808/delivery-eta-mesh/actions/workflows/ci.yml)
+[![CI](https://github.com/santiago-ven-ai/delivery-eta-mesh/actions/workflows/ci.yml/badge.svg)](https://github.com/santiago-ven-ai/delivery-eta-mesh/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/badge/coverage-9%25-yellow)](https://github.com/santiago-ven-ai/delivery-eta-mesh/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 An event-driven ETA recomputation mesh for food delivery dispatch — a Spring Boot scoring worker on Fargate, with late-event handling and Spark skew handling for hot restaurants.
@@ -111,7 +111,7 @@ The scoring worker is a stateless, high-throughput SQS consumer where a warm JVM
 ## Installation
 
 ```bash
-git clone https://github.com/Codemonster808/delivery-eta-mesh.git
+git clone https://github.com/santiago-ven-ai/delivery-eta-mesh.git
 cd delivery-eta-mesh
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt   # app deps + lint/type/security tooling
@@ -147,8 +147,8 @@ See [`docs/RUNBOOK.md`](docs/RUNBOOK.md) to run the flow, or [`docs/BUILD_GUIDE.
 
 ## Contributing
 
-Solo-maintained portfolio/demo repo — not actively seeking external contributions, but issues and questions are welcome via [GitHub Issues](https://github.com/Codemonster808/delivery-eta-mesh/issues). See [`CODEOWNERS`](CODEOWNERS) and [`SECURITY.md`](SECURITY.md) for how reports are handled.
+Solo-maintained portfolio/demo repo — not actively seeking external contributions, but issues and questions are welcome via [GitHub Issues](https://github.com/santiago-ven-ai/delivery-eta-mesh/issues). See [`CODEOWNERS`](CODEOWNERS) and [`SECURITY.md`](SECURITY.md) for how reports are handled.
 
 ## License
 
-[MIT](LICENSE) © Codemonster808
+[MIT](LICENSE) © santiago-ven-ai
