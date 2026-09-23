@@ -108,16 +108,7 @@ The scoring worker is a stateless, high-throughput SQS consumer where a warm JVM
 2. **Spark skew** — the top 5% of restaurants generate ~60% of events; key-salting with a measured before/after speedup.
 3. **Real cost comparison** — the same workload on Fargate vs. Lambda, with a $/million-events table and the volume at which the cost curve crosses.
 
-## Installation
-
-```bash
-git clone https://github.com/santiago-ven-ai/delivery-eta-mesh.git
-cd delivery-eta-mesh
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements-dev.txt   # app deps + lint/type/security tooling
-```
-
-## Usage — Demo (3 minutes)
+## Demo (3 minutes)
 
 ```bash
 source env.sh
@@ -127,16 +118,6 @@ pytest tests/integration/test_worker_idempotency.py   # redelivery-does-not-dupl
 make query
 ```
 
-## Testing
-
-```bash
-make test                     # Python (unit + integration + BDD) + Java mvn test, against real MiniStack
-make e2e                      # full pipeline, emits benchmarks/quality-report.json
-.venv/bin/pre-commit run --all-files   # ruff, mypy, whitespace/EOF checks
-```
-
-CI (`.github/workflows/ci.yml`) runs the same suite on every push, plus an isolated `security` job (`pip-audit` and a Trivy filesystem scan of the Java worker's dependency tree — see `docs/adr/0004-maven-dependency-scanning.md`) and a coverage gate that fails the build under the threshold on the badge above.
-
 ## What this is NOT
 
 Not an "Uber ETA clone" tutorial. What sets it apart: late-event handling, measured skew mitigation, and an explicit cost comparison — not just a happy-path prediction demo.
@@ -144,11 +125,3 @@ Not an "Uber ETA clone" tutorial. What sets it apart: late-event handling, measu
 ## Build it yourself
 
 See [`docs/RUNBOOK.md`](docs/RUNBOOK.md) to run the flow, or [`docs/BUILD_GUIDE.md`](docs/BUILD_GUIDE.md) to build from scratch.
-
-## Contributing
-
-Solo-maintained portfolio/demo repo — not actively seeking external contributions, but issues and questions are welcome via [GitHub Issues](https://github.com/santiago-ven-ai/delivery-eta-mesh/issues). See [`CODEOWNERS`](CODEOWNERS) and [`SECURITY.md`](SECURITY.md) for how reports are handled.
-
-## License
-
-[MIT](LICENSE) © santiago-ven-ai
