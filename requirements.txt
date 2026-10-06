@@ -75,7 +75,7 @@ pytest==9.1.1
     #   -r requirements.in
     #   pytest-bdd
     #   pytest-cov
-pytest-bdd==8.1.0
+pytest-bdd==9.0.0
     # via -r requirements.in
 pytest-cov==7.1.0
     # via -r requirements.in
